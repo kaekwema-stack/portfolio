@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kingsley Ekwemalor | Engineering Analysis & Data Analytics</title>
+<meta name="description" content="Portfolio of Kingsley Ekwemalor: CAD, CFD, FEA, multiphysics and econometric analysis, with a quality-assurance approach to technical work.">
+<meta name="theme-color" content="#050d24">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#050d24;--deep:#0a1a3f;--panel:#0d2250;--royal:#2a5bff;--cyan:#22d3ee;--text:#e6eeff;--muted:#93a4c8;--line:rgba(120,160,255,.18);--r:14px;--hd:'Sora',system-ui,sans-serif;--bd:'IBM Plex Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--navy);color:var(--text);font:400 1.0625rem/1.65 var(--bd);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:6rem 0}
+h1,h2,h3{font-family:var(--hd);line-height:1.15;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.75rem}
+.lead{color:var(--muted);max-width:62ch;margin-bottom:2.5rem}
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:50;backdrop-filter:blur(14px);background:rgba(5,13,36,.72);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:700 1.1rem var(--hd);text-decoration:none}
+.logo span{color:var(--cyan)}
+nav ul{display:flex;gap:1.75rem;list-style:none;padding:0}
+nav ul a{text-decoration:none;color:var(--muted);font-size:.95rem;transition:color .25s}
+nav ul a:hover{color:var(--cyan)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:.45rem .7rem;font:inherit;cursor:pointer}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:999px;font:600 .98rem var(--bd);text-decoration:none;border:1px solid var(--line);transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:linear-gradient(135deg,var(--royal),#1d8fff);border-color:transparent;box-shadow:0 8px 28px rgba(42,91,255,.4)}
+.btn.primary:hover{box-shadow:0 12px 36px rgba(34,211,238,.35)}
+.btn.ghost:hover{background:rgba(34,211,238,.1);border-color:var(--cyan)}
+/* hero */
+#hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:7rem 0 4rem;background:radial-gradient(1000px 600px at 80% 20%,rgba(42,91,255,.28),transparent 60%),var(--navy);overflow:hidden}
+#flow{position:absolute;inset:0;width:100%;height:100%;opacity:.7}
+.hero{position:relative;display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:center}
+h1{font-size:clamp(2.4rem,6.2vw,4.4rem);font-weight:800}
+h1 .line{display:block;overflow:hidden}
+h1 .line>span{display:block;transform:translateY(105%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+h1 .line:nth-child(2)>span{animation-delay:.12s;color:var(--cyan)}
+@keyframes up{to{transform:none}}
+.role{font:500 1.25rem var(--hd);color:var(--muted);margin:1.25rem 0 1rem;min-height:1.9rem}
+.role b{color:var(--text);font-weight:600}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--cyan);margin-left:3px;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.sum{color:var(--muted);max-width:56ch;margin-bottom:2rem}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem}
+.photo{justify-self:center;position:relative;width:min(340px,80%);aspect-ratio:1}
+.photo::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px dashed rgba(34,211,238,.5);animation:spin 40s linear infinite}
+.photo img{width:100%;height:100%;object-fit:cover;border-radius:50%;border:3px solid var(--royal);box-shadow:0 0 0 8px rgba(42,91,255,.15),0 24px 70px rgba(0,0,0,.5)}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+/* toolchain */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem}
+.card{background:linear-gradient(160deg,var(--panel),var(--deep));border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-5px);border-color:rgba(34,211,238,.55);box-shadow:0 18px 44px rgba(0,0,0,.4)}
+.card h3{font-size:1.1rem;margin-bottom:.2rem}
+.card small{color:var(--cyan);font-size:.85rem}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem;list-style:none;padding:0}
+.chips li{padding:.3rem .75rem;border-radius:999px;background:rgba(42,91,255,.18);border:1px solid var(--line);font-size:.88rem}
+/* projects */
+#projects{background:linear-gradient(180deg,var(--navy),var(--deep) 18%,var(--deep) 82%,var(--navy))}
+.tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.5rem}
+.tab{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:.6rem 1.2rem;font:500 .95rem var(--bd);cursor:pointer;transition:all .25s}
+.tab:hover{color:var(--text);border-color:var(--cyan)}
+.tab[aria-selected=true]{background:var(--royal);color:#fff;border-color:var(--royal)}
+.panel{display:none;background:rgba(5,13,36,.55);border:1px solid var(--line);border-radius:var(--r);padding:clamp(1.4rem,4vw,2.5rem)}
+.panel.on{display:block;animation:fade .5s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}}
+.panel h3{font-size:clamp(1.3rem,3vw,1.7rem);margin-bottom:.6rem}
+.panel>p{color:var(--muted);max-width:70ch;margin-bottom:1.75rem}
+.doc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
+.doc>div{border-left:2px solid var(--royal);padding-left:1rem}
+.doc h4{font:600 .95rem var(--hd);color:var(--cyan);margin-bottom:.45rem}
+.doc ul{padding-left:1.1rem;color:var(--muted);font-size:.97rem}
+.doc li{margin-bottom:.3rem}
+.tl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:1.75rem}
+.tl div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1rem;transition:transform .25s,border-color .25s}
+.tl div:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.tl b{font-family:var(--hd);display:block;margin-bottom:.25rem}
+.tl span{color:var(--muted);font-size:.92rem}
+/* experience timeline */
+.exp{position:relative;padding-left:2rem;border-left:2px solid var(--line)}
+.job{position:relative;margin-bottom:2.25rem}
+.job::before{content:"";position:absolute;left:calc(-2rem - 7px);top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px rgba(34,211,238,.18)}
+.job h3{font-size:1.2rem}
+.job .meta{color:var(--cyan);font-size:.92rem;margin:.2rem 0 .7rem}
+.job ul{padding-left:1.1rem;color:var(--muted)}
+.job li{margin-bottom:.35rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.two ul{padding-left:1.1rem;color:var(--muted)}
+.two li{margin-bottom:.4rem}
+/* contact */
+#contact{text-align:center}
+#contact .lead{margin-inline:auto}
+#contact .actions{justify-content:center}
+footer{padding:2rem 0;text-align:center;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+@media(max-width:820px){
+ section{padding:4.25rem 0}
+ .hero{grid-template-columns:1fr;text-align:left}
+ .photo{order:-1;width:200px;justify-self:start}
+ .burger{display:block}
+ nav ul{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--navy);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .35s}
+ nav ul.open{max-height:360px}
+ nav ul a{display:block;padding:1rem 1.5rem}
+ .two{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}h1 .line>span{transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main">
+ <a class="logo" href="#hero">K. Ekwemalor<span>.</span></a>
+ <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+ <ul id="menu">
+  <li><a href="#tools">Toolchain</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li>
+ </ul>
+</nav></div></header>
+
+<main>
+<section id="hero"><canvas id="flow" aria-hidden="true"></canvas>
+ <div class="wrap hero">
+  <div>
+   <h1><span class="line"><span>Kingsley</span></span><span class="line"><span>Ekwemalor</span></span></h1>
+   <p class="role" aria-live="polite">I work in <b id="typed"></b><span class="caret"></span></p>
+   <p class="sum">Analytical and research-oriented professional with an M.S. in Integrated Animal Health, a quality-assurance mindset, and a technical toolkit spanning CAD, CFD, FEA, multiphysics and econometric analysis. Based in Greensboro, NC, and authorized for US remote work.</p>
+   <div class="actions">
+    <a class="btn primary" href="resume.pdf" download>Download Resume</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/kingsley-ekwemalor-67274b399/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn ghost" href="mailto:kaekwemalor@ncat.edu">Email me</a>
+   </div>
+  </div>
+  <div class="photo"><img src="data:image/jpeg;base64,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" alt="Portrait of Kingsley Ekwemalor" width="300" height="300"></div>
+ </div>
+</section>
+
+<section id="tools"><div class="wrap">
+ <h2 class="rv">Engineering toolchain</h2>
+ <p class="lead rv">Open-source and commercial tools I use across design, simulation and analysis, grouped by the question each one answers.</p>
+ <div class="tools">
+  <article class="card rv"><h3>Mechanical CAD</h3><small>Design and drawings</small><ul class="chips"><li>FreeCAD</li><li>Autodesk Inventor</li><li>AutoCAD Mechanical</li></ul></article>
+  <article class="card rv"><h3>CFD</h3><small>Fluid flow and heat transfer</small><ul class="chips"><li>OpenFOAM</li><li>Autodesk CFD</li><li>SolidWorks Flow Simulation</li></ul></article>
+  <article class="card rv"><h3>FEA & Multiphysics</h3><small>Structures and coupled physics</small><ul class="chips"><li>CalculiX</li><li>OpenRadioss</li><li>COMSOL Multiphysics</li></ul></article>
+  <article class="card rv"><h3>Data & Economics</h3><small>Statistics and econometrics</small><ul class="chips"><li>EViews</li><li>LibreOffice</li><li>Python</li><li>R</li><li>SQL</li><li>Tableau</li></ul></article>
+ </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+ <h2 class="rv">Project documentation</h2>
+ <p class="lead rv">How I set up, run and check technical work in each tool family. Choose a discipline to see the objective, workflow, verification steps and deliverables.</p>
+ <div class="tabs rv" role="tablist" aria-label="Project disciplines"></div>
+ <div id="panels" class="rv"></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+ <h2 class="rv">Experience</h2>
+ <p class="lead rv">A career built on validating data, reviewing models and documenting decisions so others can reproduce them.</p>
+ <div class="exp">
+  <article class="job rv"><h3>Quality Evaluation & Data Classification Specialist</h3><div class="meta">North Carolina A&T State University, Animal Sciences | Jul 2019 – Jun 2023</div><ul><li>Validated high-volume research datasets against detailed analytical guidelines.</li><li>Reviewed imaging, microarray and tabular records to flag anomalies, outliers and discrepancies.</li><li>Wrote technical reports and methodological justifications across 15+ peer-reviewed research outputs.</li><li>Verified data integrity and reproducibility across multiyear initiatives.</li></ul></article>
+  <article class="job rv"><h3>Adjunct Instructor, Technical & Data Evaluation</h3><div class="meta">North Carolina A&T State University | Aug 2019 – Dec 2024</div><ul><li>Assessed technical work from 150+ students per semester with structured rubrics.</li><li>Taught data cleaning, classification performance, precision, recall and confusion matrices.</li><li>Developed standardized evaluation criteria for consistent, repeatable assessment.</li></ul></article>
+  <article class="job rv"><h3>Graduate Analyst & Reviewer</h3><div class="meta">North Carolina A&T State University | Aug 2017 – May 2019</div><ul><li>Evaluated classification trees and support vector machines to find misclassifications and edge cases.</li><li>Prepared structured summaries of model behavior for technical review.</li></ul></article>
+  <article class="job rv"><h3>Quality & Lab Support Specialist</h3><div class="meta">North Carolina A&T State University, Chemistry | Aug 2015 – May 2017</div><ul><li>Audited lab documentation and experimental work against procedures and compliance standards.</li><li>Identified deviations, supported corrective action and kept traceable logs and inventory.</li></ul></article>
+ </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+ <h2 class="rv">Skills and credentials</h2>
+ <div class="two" style="margin-top:2rem">
+  <div class="card rv"><h3>Core competencies</h3><ul class="chips"><li>Quantitative research</li><li>Data validation</li><li>ML output evaluation</li><li>Anomaly detection</li><li>Root-cause analysis</li><li>Technical reporting</li><li>Standards compliance</li><li>Research methodology</li></ul></div>
+  <div class="card rv"><h3>Education and certifications</h3><ul style="margin-top:.8rem"><li>M.S., Integrated Animal Health, North Carolina A&T State University (2015)</li><li>Six Sigma Green Belt, process and quality improvement</li><li>Effective Feedback Certification, NC A&T</li><li>Inclusive Mentoring Workshop</li></ul></div>
+ </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+ <h2 class="rv">Let's work together</h2>
+ <p class="lead rv">Open to analytical, research, technical quality and computational roles. US-based and authorized for remote work.</p>
+ <div class="actions rv">
+  <a class="btn primary" href="resume.pdf" download>Download Resume</a>
+  <a class="btn ghost" href="mailto:kaekwemalor@ncat.edu">kaekwemalor@ncat.edu</a>
+  <a class="btn ghost" href="tel:+13362853289">336-285-3289</a>
+  <a class="btn ghost" href="https://www.linkedin.com/in/kingsley-ekwemalor-67274b399/" target="_blank" rel="noopener">LinkedIn</a>
+ </div>
+</div></section>
+</main>
+<footer>© <span id="yr"></span> Kingsley Ekwemalor. Greensboro, NC.</footer>
+
+<script>
+const P=[
+{id:'CAD',tab:'Mechanical CAD',t:'Parametric part, assembly and drawing documentation',d:'Building constrained, editable models and turning them into drawing packages that a fabricator or reviewer can read without guesswork.',
+ tools:[['FreeCAD','Open-source parametric modeling and scripted geometry'],['Autodesk Inventor','Assemblies, constraints and design-intent modeling'],['AutoCAD Mechanical','Dimensioned 2D drawings, tolerances and bills of materials']],
+ obj:['Capture design intent in fully constrained sketches','Prepare geometry that transfers cleanly into CFD and FEA'],
+ wf:['Sketch with dimensional and geometric constraints','Model parts, then assemble with mates','Generate dimensioned drawings with tolerances and BOM','Simplify geometry for simulation'],
+ qa:['Interference and clearance checks','Dimension audit against the source specification','Revision log for every change'],
+ del:['Native model files and neutral exports (STEP)','Drawing packages with BOM','Short design-intent notes']},
+{id:'CFD',tab:'CFD',t:'Computational fluid dynamics: setup, solve, verify',d:'Internal and external flow studies run across open-source and commercial solvers, with the solution checked before it is trusted.',
+ tools:[['OpenFOAM','Scripted case setup, meshing and custom post-processing'],['Autodesk CFD','Internal flow and thermal studies with guided setup'],['SolidWorks Flow Simulation','Fast flow checks on CAD-native geometry']],
+ obj:['Predict velocity, pressure and temperature fields','Compare design variants on the same boundary conditions'],
+ wf:['Clean geometry and define the fluid domain','Mesh with boundary-layer refinement','Set turbulence model and boundary conditions','Run to convergence and post-process'],
+ qa:['Mesh-independence study','Residual and monitor-point convergence','Cross-check results between two solvers where possible'],
+ del:['Case files and run logs','Contour, streamline and plot sets','Report with assumptions and limitations']},
+{id:'FEA',tab:'FEA & Multiphysics',t:'Structural, impact and coupled-physics simulation',d:'Stress, deformation and coupled-field analysis, with the right solver chosen for each loading condition.',
+ tools:[['CalculiX','Linear and nonlinear static and thermal-structural analysis'],['OpenRadioss','Explicit dynamics for impact and crash-type events'],['COMSOL Multiphysics','Coupled fields such as thermal, structural and fluid interaction']],
+ obj:['Locate stress concentrations and failure risk','Study behavior under dynamic and coupled loads'],
+ wf:['Idealize geometry, materials and contacts','Mesh and refine near stress risers','Apply loads and constraints, then solve','Interpret results against allowable limits'],
+ qa:['Hand-calculation sanity check','Mesh convergence on peak stress','Energy balance review for explicit runs'],
+ del:['Input decks and solver logs','Stress and displacement plots','Findings with recommended design changes']},
+{id:'DATA',tab:'Data & Econometrics',t:'Econometric modeling and reproducible data analysis',d:'Time-series and regression work in EViews, supported by clean, auditable data preparation.',
+ tools:[['EViews','Regression, unit-root tests, cointegration and forecasting'],['LibreOffice','Data cleaning, pivot summaries and reporting tables'],['Python / R','Pandas, NumPy and R for validation and repeatable scripts']],
+ obj:['Estimate and test relationships in economic time series','Produce forecasts with stated uncertainty'],
+ wf:['Clean and document the dataset','Test stationarity before modeling','Estimate and compare candidate models','Forecast and report results'],
+ qa:['Residual diagnostics: autocorrelation, heteroskedasticity, normality','Stability and out-of-sample checks','Documented data lineage'],
+ del:['EViews workfiles and scripts','Clean datasets with a data dictionary','Technical report with methodology']}
+];
+const list=a=>'<ul>'+a.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+const tabs=document.querySelector('.tabs'),panels=document.getElementById('panels');
+P.forEach((p,i)=>{
+ tabs.insertAdjacentHTML('beforeend',`<button class="tab" role="tab" id="t-${p.id}" aria-controls="p-${p.id}" aria-selected="${i==0}" tabindex="${i?-1:0}">${p.tab}</button>`);
+ panels.insertAdjacentHTML('beforeend',`<div class="panel${i?'':' on'}" role="tabpanel" id="p-${p.id}" aria-labelledby="t-${p.id}"><h3>${p.t}</h3><p>${p.d}</p>
+ <div class="doc"><div><h4>Objectives</h4>${list(p.obj)}</div><div><h4>Workflow</h4>${list(p.wf)}</div><div><h4>Verification</h4>${list(p.qa)}</div><div><h4>Deliverables</h4>${list(p.del)}</div></div>
+ <div class="tl">${p.tools.map(t=>`<div><b>${t[0]}</b><span>${t[1]}</span></div>`).join('')}</div></div>`);
+});
+const tb=[...document.querySelectorAll('.tab')],pn=[...document.querySelectorAll('.panel')];
+function pick(i){tb.forEach((b,j)=>{b.setAttribute('aria-selected',i==j);b.tabIndex=i==j?0:-1;pn[j].classList.toggle('on',i==j)});tb[i].focus()}
+tb.forEach((b,i)=>{b.onclick=()=>pick(i);b.onkeydown=e=>{if(e.key=='ArrowRight')pick((i+1)%tb.length);if(e.key=='ArrowLeft')pick((i+tb.length-1)%tb.length)}});
+/* nav */
+const bg=document.querySelector('.burger'),mn=document.getElementById('menu');
+bg.onclick=()=>{const o=mn.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
+mn.querySelectorAll('a').forEach(a=>a.onclick=()=>{mn.classList.remove('open');bg.setAttribute('aria-expanded',false)});
+document.getElementById('yr').textContent=new Date().getFullYear();
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
+/* typed roles */
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,ty=document.getElementById('typed');
+const words=['engineering analysis','computational modeling','CFD and FEA simulation','data analytics and econometrics'];
+if(rm){ty.textContent=words[0]}else{let w=0,c=0,del=false;(function tick(){const s=words[w];ty.textContent=s.slice(0,c);
+ if(!del&&c==s.length){del=true;return setTimeout(tick,1700)}
+ if(del&&c==0){del=false;w=(w+1)%words.length}
+ c+=del?-1:1;setTimeout(tick,del?28:60)})()}
+/* hero flow field: streamlines bending around an obstacle, a nod to CFD */
+(function(){const cv=document.getElementById('flow'),x=cv.getContext('2d');if(rm)return;
+ let W,H,ps=[],raf;const N=()=>Math.min(140,Math.floor(W/9));
+ function size(){const r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;x.setTransform(d,0,0,d,0,0);ps=Array.from({length:N()},()=>sp(true))}
+ const sp=f=>({x:f?Math.random()*W:-10,y:Math.random()*H,a:Math.random()*.5+.25});
+ function vel(px,py){const cx=W*.74,cy=H*.5,R=Math.min(W,H)*.16,dx=px-cx,dy=py-cy,r2=dx*dx+dy*dy+1,k=R*R;
+  return [1+k*(dy*dy-dx*dx)/(r2*r2),-2*k*dx*dy/(r2*r2)]}
+ function step(){x.fillStyle='rgba(5,13,36,.16)';x.fillRect(0,0,W,H);
+  ps.forEach((p,i)=>{const v=vel(p.x,p.y),nx=p.x+v[0]*1.8,ny=p.y+v[1]*1.8;
+   x.strokeStyle=`rgba(34,211,238,${p.a})`;x.lineWidth=1.1;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(nx,ny);x.stroke();
+   p.x=nx;p.y=ny;if(p.x>W+10||p.y<-10||p.y>H+10||isNaN(p.x))ps[i]=sp(false)});
+  raf=requestAnimationFrame(step)}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(e=>{cancelAnimationFrame(raf);if(e[0].isIntersecting)step()}).observe(cv)})();
+</script>
+</body>
+</html>
